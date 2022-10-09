@@ -1,23 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Navbar from './components/Navbar';
+import AddNote from './components/AddNote';
+import LoginRegister from './components/Login_Register';
+import Notes from './components/Notes';
+import Profile from './components/Profile';
+import UpdateNote from './components/UpdateNote';
+import PrivateComponent from './components/PrivateComponent';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+      <div className="App">
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route element={<PrivateComponent/>}>
+              <Route path='/' element={<Notes/>} />
+              <Route path='/add_note' element={<AddNote/>} />
+              <Route path='/profile' element={<Profile/>} />
+              <Route path='/update/:id' element={<UpdateNote/>} />
+            </Route>
+            <Route path='/login_register' element={<LoginRegister/>} />
+          </Routes>
+        </BrowserRouter>
+      </div>
     </div>
   );
 }
