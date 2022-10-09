@@ -1,5 +1,10 @@
 # Getting Started with Create React App
 
+![thumbnail2](https://user-images.githubusercontent.com/107117774/194769171-f164c20b-a607-4425-a1f6-6b36e09cac34.png)
+
+Youtube
+https://www.youtube.com/watch?v=yv1ljg3UK8Q
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
